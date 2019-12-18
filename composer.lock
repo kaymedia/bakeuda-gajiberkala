@@ -54,7 +54,7 @@
             "version": "v3.4.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:twbs/bootstrap.git",
+                "url": "https://github.com/twbs/bootstrap.git",
                 "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
             },
             "dist": {
@@ -1950,16 +1950,16 @@
         },
         {
             "name": "fzaninotto/faker",
-            "version": "v1.9.0",
+            "version": "v1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "27a216cbe72327b2d6369fab721a5843be71e57d"
+                "reference": "fc10d778e4b84d5bd315dad194661e091d307c6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/27a216cbe72327b2d6369fab721a5843be71e57d",
-                "reference": "27a216cbe72327b2d6369fab721a5843be71e57d",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/fc10d778e4b84d5bd315dad194661e091d307c6f",
+                "reference": "fc10d778e4b84d5bd315dad194661e091d307c6f",
                 "shasum": ""
             },
             "require": {
@@ -1972,7 +1972,9 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": []
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -1994,7 +1996,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2019-11-14T13:13:06+00:00"
+            "time": "2019-12-12T13:22:17+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -3631,16 +3633,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.4.0",
+            "version": "v4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "35d9077f495c6d184d9930f7a7ecbd1ad13c7ab8"
+                "reference": "f0aea3df20d15635b3cb9730ca5eea1c65b7f201"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/35d9077f495c6d184d9930f7a7ecbd1ad13c7ab8",
-                "reference": "35d9077f495c6d184d9930f7a7ecbd1ad13c7ab8",
+                "url": "https://api.github.com/repos/symfony/console/zipball/f0aea3df20d15635b3cb9730ca5eea1c65b7f201",
+                "reference": "f0aea3df20d15635b3cb9730ca5eea1c65b7f201",
                 "shasum": ""
             },
             "require": {
@@ -3703,11 +3705,11 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-11-13T07:39:40+00:00"
+            "time": "2019-12-01T10:06:17+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v4.4.0",
+            "version": "v4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -3760,7 +3762,7 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v4.4.0",
+            "version": "v4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
@@ -3821,16 +3823,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.4.0",
+            "version": "v4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "ab1c43e17fff802bef0a898f3bc088ac33b8e0e1"
+                "reference": "b3c3068a72623287550fe20b84a2b01dcba2686f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/ab1c43e17fff802bef0a898f3bc088ac33b8e0e1",
-                "reference": "ab1c43e17fff802bef0a898f3bc088ac33b8e0e1",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b3c3068a72623287550fe20b84a2b01dcba2686f",
+                "reference": "b3c3068a72623287550fe20b84a2b01dcba2686f",
                 "shasum": ""
             },
             "require": {
@@ -3887,7 +3889,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2019-11-08T22:40:51+00:00"
+            "time": "2019-11-28T13:33:56+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -3949,7 +3951,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.0",
+            "version": "v4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -4172,7 +4174,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.4.0",
+            "version": "v4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
