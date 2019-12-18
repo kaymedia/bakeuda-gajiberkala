@@ -29,7 +29,7 @@ class Siswaku extends \yii\db\ActiveRecord
     {
         return [
             [['id_kelas'], 'integer'],
-            [['nis', 'nama'], 'string', 'max' => 20],
+            [['nis', 'nama', 'tglmasuk'], 'string', 'max' => 20],
         ];
     }
 
@@ -43,6 +43,7 @@ class Siswaku extends \yii\db\ActiveRecord
             'nis' => 'Nis',
             'nama' => 'Nama',
             'id_kelas' => 'Id Kelas',
+            'tglmasuk' => 'Tanggal Masuk',
         ];
     }
 	public function getKelas(){

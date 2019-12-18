@@ -32,6 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_siswa',
             'nis',
             'nama',
+            'tglmasuk',
             'id_kelas',
         ],
     ]) ?>

@@ -18,8 +18,8 @@ class SiswakuSearch extends Siswaku
     public function rules()
     {
         return [
-            [['id_siswa', 'id_kelas'], 'integer'],
-            [['nis', 'nama'], 'safe'],
+            [['id_kelas'], 'integer'],
+            [['nis', 'nama', 'tglmasuk'], 'string', 'max' => 20],
         ];
     }
 

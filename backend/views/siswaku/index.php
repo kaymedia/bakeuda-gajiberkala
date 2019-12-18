@@ -30,6 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'nis',
             'nama',
             'kelas.namakelas',
+            'tglmasuk',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
