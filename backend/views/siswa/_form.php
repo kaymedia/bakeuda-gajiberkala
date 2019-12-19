@@ -1,5 +1,4 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\date\DatePicker;
@@ -19,11 +18,11 @@ $saveOptions = [
  
 $saveCont = ['class' => 'kv-saved-cont'];
 /* @var $this yii\web\View */
-/* @var $model common\models\Siswaku */
+/* @var $model common\models\Siswa */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="siswaku-form">
+<div class="siswa-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -32,7 +31,11 @@ $saveCont = ['class' => 'kv-saved-cont'];
     <?= $form->field($model, 'nama')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'id_kelas')->textInput() ?>
-	 <?= $form->field($model, 'tglmasuk')->widget(
+
+    <?= $form->field($model, 'tglmasuk')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'gajiorangtua')->textInput(['maxlength' => true]) ?>
+<?= $form->field($model, 'tglmasuk')->widget(
         DatePicker::className(), [
             
 	'options' => ['placeholder' => 'Pilih Tanggal Masuk ...'],
@@ -54,10 +57,13 @@ $saveCont = ['class' => 'kv-saved-cont'];
     'displayOptions' => $dispOptions,
     'saveInputContainer' => $saveCont
     ]);?>
-    <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
-    </div>
+  
+	<?php if (!Yii::$app->request->isAjax){ ?>
+	  	<div class="form-group">
+	        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+	    </div>
+	<?php } ?>
 
     <?php ActiveForm::end(); ?>
-
+    
 </div>

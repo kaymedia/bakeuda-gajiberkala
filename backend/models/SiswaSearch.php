@@ -2,28 +2,29 @@
 
 namespace backend\models;
 
+use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\Siswa;
 
 /**
- * SiswaSearch represents the model behind the search form of `common\models\Siswa`.
+ * SiswaSearch represents the model behind the search form about `common\models\Siswa`.
  */
 class SiswaSearch extends Siswa
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function rules()
     {
         return [
             [['id_siswa', 'id_kelas'], 'integer'],
-            [['nis', 'nama'], 'safe'],
+            [['nis', 'nama', 'tglmasuk', 'gajiorangtua'], 'safe'],
         ];
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function scenarios()
     {
@@ -41,9 +42,7 @@ class SiswaSearch extends Siswa
     public function search($params)
     {
         $query = Siswa::find();
-
-        // add conditions that should always apply here
-
+		$query->joinWith[['kelas']];
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
@@ -56,14 +55,15 @@ class SiswaSearch extends Siswa
             return $dataProvider;
         }
 
-        // grid filtering conditions
         $query->andFilterWhere([
             'id_siswa' => $this->id_siswa,
             'id_kelas' => $this->id_kelas,
         ]);
 
         $query->andFilterWhere(['like', 'nis', $this->nis])
-            ->andFilterWhere(['like', 'nama', $this->nama]);
+            ->andFilterWhere(['like', 'nama', $this->nama])
+            ->andFilterWhere(['like', 'tglmasuk', $this->tglmasuk])
+            ->andFilterWhere(['like', 'gajiorangtua', $this->gajiorangtua]);
 
         return $dataProvider;
     }
