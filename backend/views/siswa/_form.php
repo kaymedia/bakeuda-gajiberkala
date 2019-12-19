@@ -32,9 +32,6 @@ $saveCont = ['class' => 'kv-saved-cont'];
 
     <?= $form->field($model, 'id_kelas')->textInput() ?>
 
-    <?= $form->field($model, 'tglmasuk')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'gajiorangtua')->textInput(['maxlength' => true]) ?>
 <?= $form->field($model, 'tglmasuk')->widget(
         DatePicker::className(), [
             
